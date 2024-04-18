@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>MovieTheaterCinema</h1>
+<p>Your provider of tickets online.</p>
+<hr>
+<h2>Choose your movie:</h2>
+<label id for="moviePicker">
+<select id="moviePicker">
+    <option value="">Pick here:</option>
+    <option value="GODFATHER">GODFATHER</option>
+    <option value="CAPE FEAR">CAPE FEAR</option>
+    <option value="SIDEWAYS">SIDEWAYS</option>
+    <option value="MAGNOLIA">MAGNOLIA</option>
+    <option value="PSYCHO">PSYCHO</option>
+    <option value="SHREK">SHREK</option>
+</select>
+
+Amount:
+<label id="amountTickets">
+    <input type="number" id="amountField" min="1" max="9">
+</label>
+</label>
+<form method="post" name="purchase" onsubmit="typeTickets(); return false;">
+<h3>Personal details:</h3>
+
+<table class="tableField">
+<tr>
+    <td>first name: </td><td> <input type="text" id="firstNameField" required></td>
+    <td>last name: </td><td> <input type="text" id="lastNameField" required></td>
+</tr>
+    <tr>
+        <td>email address: </td><td><input type="email" id="emailField" required></td>
+        <td>phone number: </td><td><input type="tel" id="numberField" required></td>
+    </tr>
+</table>
+</form>
+<button onclick="confirmTickets()">CONFIRM</button>
+<hr>
+<h4>Your order:</h4>
+<span id="orderField"></span>
+<button onclick="deleteTickets()">DELETE</button>
+</body>
+</html>
